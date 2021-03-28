@@ -3,8 +3,10 @@ A very summarized setup of a Mina protocol block producer node in Docker
 
 Note: This is just to easily get your node up and running. For a setup with any serious amount of tokens, you should consider doing [something more secure](https://minaprotocol.com/docs/advanced/hot-cold-block-production).
 
-Requirements:
+### Requirements:
 * Docker
+
+### Steps (Linux or WSL)
 
 1. Create a directory for your Mina related files:
 ```sh
