@@ -13,9 +13,10 @@ Note: This is just to easily get your node up and running. For a setup with any 
 mkdir -p ~/mina && cd ~/mina
 ```
 
-2. *If you have no keys created already*, create a keypair in a new directory called `keys`:
+2. *If you have no keys created already*, create a keypair in a new directory called `keys` and put some restrictive permissions on them:
 ```sh
  docker run  --interactive --tty --rm --volume $(pwd)/keys:/keys minaprotocol/generate-keypair:0.2.12-718eba4 -privkey-path keys/my-wallet
+ chmod 700 keys
 ```
 
 3. To add your newly created account to the public ledger, which is needed for it to be practically usable, you need to get a transaction of >= 1 Mina to your public address (`keys/my-wallet.pub`). 1 Mina of this first transaction will be burned as a fee for account synchronization.
